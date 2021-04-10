@@ -16,42 +16,71 @@
 		<title>拣尽寒枝</title>
 
 		<style>
-			Happybody {
+			body {
 				margin: 0;
 				background: #020202;
 				cursor: crosshair;
+				overflow-y: hidden;
+				overflow-x: hidden;
 			}
 			canvas {
 				display: block;
 			}
 			#header {
+				transition: height 1s;
+			}
+			.title {
 				position: absolute;
-				top: 20%;
+				top: 30%;
 				left: 50%;
 				transform: translate(-50%, -50%);
 				color: #fff;
 				-webkit-user-select: none;
 				user-select: none;
 			}
-			h1 {
+			.title h1 {
 				font-family: "Source Sans Pro";
 				font-size: 5em;
 				font-weight: 900;
 			}
 			a {
-				text-decoration: "none";
+				text-decoration: none;
 				color: white;
-        border: 2px solid white;
-        padding: 25px
+				border: 2px solid white;
+				padding: 25px;
+			}
+			#iframe {
+				margin-left: 0;
+				margin-right: 0;
+				height: 100vh;
+				width: 100vw;
+        position: fixed;
+        top: 100vh;
+        transition: top 1s;
+			}
+			iframe {
+				width: 100%;
+				height: 100%;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="header">
-			<h1>Happy Birthday</h1>
-			<a href="">Click Me to Surprise</a>
-		</div>
 		<canvas id="birthday"></canvas>
+		<section id="header">
+			<div class="title">
+				<h1>Happy Birthday</h1>
+				<button href="" onClick="nextPage()">Click Me to Surprise</button>
+			</div>
+		</section>
+		<section id="iframe">
+			<iframe
+				frameborder="no"
+				marginwidth="0"
+				marginheight="0"
+				src="https://blog.yungeeker.com/people/tww"
+			></iframe>
+		</section>
+
 		<script src="/index.js"></script>
 	</body>
 </html>

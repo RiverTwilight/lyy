@@ -156,3 +156,8 @@ document.ontouchstart = evt => birthday.onClick(evt)
   	
 
   })()
+
+  const nextPage = () => {
+    var header = document.getElementById("iframe");
+    header.style.top = "0" 
+  }
